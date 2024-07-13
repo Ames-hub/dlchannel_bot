@@ -31,7 +31,6 @@ bot = lightbulb.BotApp(
 
 @bot.command
 @lightbulb.app_command_permissions(dm_enabled=False)
-@lightbulb.add_cooldown(bucket=lightbulb.buckets.GuildBucket, length=10, uses=1)
 @lightbulb.command(name="download", description="Download the selected channel's messages and save them to a file.")
 @lightbulb.implements(lightbulb.SlashCommand)
 async def download(ctx: lightbulb.SlashContext) -> None:
